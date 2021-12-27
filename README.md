@@ -59,3 +59,29 @@ groupadd clamav
 useradd -g clamav -s /bin/false -c "Clam Antivirus" clamav
 ```
 
+## Configure clamd.scan
+
+ Edit the configs you need on /etc/clam.d/scan.conf
+ 
+ ```
+ Logfile /var/log/clamd.scan
+ 
+ TCPScoket 3310
+ 
+ TCPAddr 127.0.0.1
+ 
+ ```
+ 
+ ## Configure freshclam.conf
+ 
+ open freshclam.conf on your text editor 
+ 
+ ```
+ vi /etc/freshclam.conf
+ 
+ 
+ #Uncommand
+ 
+ TestDatabase no
+ ```
+ 
