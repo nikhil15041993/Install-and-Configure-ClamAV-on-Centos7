@@ -137,3 +137,19 @@ CONFIG_FANOTIFY=y
 CONFIG_FANOTIFY_ACCESS_PERMISSIONS=y
 
 ```
+
+
+## Configure clamd.scan
+
+ Edit the configs you need on /etc/clam.d/scan.conf
+ 
+ ```
+    OnAccessExcludeUname clamav
+    OnAccessPrevention  yes
+
+    OnAccessIncludePath /home
+    OnAccessExcludePath /home/user2
+    OnAccessExcludePath /home/user4
+```
+
+
